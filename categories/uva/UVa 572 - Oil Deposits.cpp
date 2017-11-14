@@ -7,7 +7,7 @@ char grid[100][100];
 
 void DFS(int x, int y) {
 
-    int xi, yi;
+    int xi, yj;
     grid[x][y] = '*';
 
     for (int i = -1; i <= 1; ++i) {
@@ -15,14 +15,14 @@ void DFS(int x, int y) {
         for (int j = -1; j <= 1; ++j) {
 
             xi = x + i;
-            yi = y + j;
+            yj = y + j;
 
             if (0 <= xi && xi < m &&
-                0 <= yi && yi < n &&
-                grid[xi][yi] == '@') {
-								
-                DFS(xi, yi);
-            }			
+                0 <= yj && yj < n &&
+                grid[xi][yj] == '@') {
+
+                DFS(xi, yj);
+            }
         }
     }
 }
@@ -31,7 +31,7 @@ int main() {
 
     ios::sync_with_stdio(false);
     cin.tie(0);
-		
+
     while (cin >> m >> n && m != 0) {
 
         for (int i = 0; i < m; ++i) {
@@ -55,8 +55,8 @@ int main() {
                 }
             }
         }
-    } 
-  	
-    cout << deposit << '\n';  
+    }
+
+    cout << deposit << '\n';
     return 0;
 }
