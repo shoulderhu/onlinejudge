@@ -248,6 +248,278 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://shoulderhu.github.io/onlinejudge/onlinejudge/codeforces/329b/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shoulder Hu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/onlinejudge/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Online Judge">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/onlinejudge/codeforces/329b/" itemprop="url">329B - Biridian Forest</a></h1>
+        
+
+        <div class="post-meta">
+          
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/onlinejudge/categories/codeforces/" itemprop="url" rel="index">
+                    <span itemprop="name">codeforces</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/onlinejudge/codeforces/329b/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="codeforces//329b//" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> r, c, node = <span class="number">0</span>, moves, battle = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> dir[<span class="number">4</span>][<span class="number">2</span>] = &#123; &#123; <span class="number">0</span>, <span class="number">-1</span> &#125;,&#123; <span class="number">-1</span>, <span class="number">0</span> &#125;,&#123; <span class="number">0</span>, <span class="number">1</span> &#125;,&#123; <span class="number">1</span>, <span class="number">0</span> &#125; &#125;;</div><div class="line"><span class="keyword">char</span> forest[<span class="number">1000</span>][<span class="number">1000</span>];</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">pos</span> &#123;</span> <span class="keyword">int</span> x, y; &#125;E, P, p;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">breeder</span> &#123;</span> <span class="keyword">int</span> X, step; &#125;b;</div><div class="line"><span class="built_in">vector</span>&lt;struct breeder&gt; B;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">BFS</span><span class="params">(struct pos &amp;E)</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> size, step = <span class="number">0</span>;</div><div class="line">    <span class="keyword">char</span> f;</div><div class="line">    <span class="built_in">queue</span>&lt;struct pos&gt; Queue;</div><div class="line">    Queue.push(E);</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (!Queue.empty()) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (node == <span class="number">0</span>) &#123; <span class="keyword">break</span>; &#125;</div><div class="line">        size = Queue.size();</div><div class="line">        ++step;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; ++i) &#123;</div><div class="line"></div><div class="line">            P = Queue.front();</div><div class="line">            Queue.pop();</div><div class="line"></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; ++j) &#123;</div><div class="line"></div><div class="line">                p.x = P.x + dir[j][<span class="number">0</span>];</div><div class="line">                p.y = P.y + dir[j][<span class="number">1</span>];</div><div class="line">                f = forest[p.x][p.y];</div><div class="line"></div><div class="line">                <span class="keyword">if</span> (<span class="number">0</span> &lt;= p.x &amp;&amp; p.x &lt; r &amp;&amp;</div><div class="line">                    <span class="number">0</span> &lt;= p.y &amp;&amp; p.y &lt; c &amp;&amp;					</div><div class="line">                    f != <span class="string">'T'</span>) &#123;</div><div class="line"></div><div class="line">                    <span class="keyword">if</span> (f == <span class="string">'S'</span>) &#123;</div><div class="line"></div><div class="line">                        moves = step;</div><div class="line">                        --node;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (f != <span class="string">'0'</span>) &#123;</div><div class="line"></div><div class="line">                        b.X = f - <span class="string">'0'</span>;</div><div class="line">                        b.step = step;		</div><div class="line">                        B.push_back(b);</div><div class="line">                        --node;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                    forest[p.x][p.y] = <span class="string">'T'</span>;</div><div class="line">                    Queue.push(p);</div><div class="line">                &#125;</div><div class="line">            &#125;			</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="built_in">cin</span> &gt;&gt; r &gt;&gt; c;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; r; ++i) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; c; ++j) &#123;</div><div class="line"></div><div class="line">            <span class="built_in">cin</span> &gt;&gt; forest[i][j];			</div><div class="line"></div><div class="line">            <span class="keyword">switch</span> (forest[i][j]) &#123;</div><div class="line"></div><div class="line">            <span class="keyword">case</span> <span class="string">'0'</span>:</div><div class="line">            <span class="keyword">case</span> <span class="string">'T'</span>:</div><div class="line">                <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">case</span> <span class="string">'E'</span>:</div><div class="line">                E.x = i;</div><div class="line">                E.y = j;</div><div class="line">                forest[i][j] = <span class="string">'T'</span>;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                ++node;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;			</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    BFS(E);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; B.size(); ++i) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (moves &gt;= B[i].step) &#123;</div><div class="line"></div><div class="line">            battle += B[i].X;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; battle &lt;&lt; <span class="string">'\n'</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://shoulderhu.github.io/onlinejudge/onlinejudge/codeforces/115a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shoulder Hu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/onlinejudge/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Online Judge">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/onlinejudge/codeforces/115a/" itemprop="url">115A - Party</a></h1>
+        
+
+        <div class="post-meta">
+          
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/onlinejudge/categories/codeforces/" itemprop="url" rel="index">
+                    <span itemprop="name">codeforces</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/onlinejudge/codeforces/115a/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="codeforces//115a//" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, p, groupMax;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; manager;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; superior[<span class="number">2001</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> group)</span> </span>&#123;</div><div class="line"></div><div class="line">    groupMax = max(group, groupMax);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; superior[m].size(); ++i) &#123;</div><div class="line"></div><div class="line">        DFS(superior[m][i], group + <span class="number">1</span>);		</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</div><div class="line"></div><div class="line">        <span class="built_in">cin</span> &gt;&gt; p;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (p == <span class="number">-1</span>) &#123;</div><div class="line"></div><div class="line">            manager.push_back(i);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line"></div><div class="line">            superior[p].push_back(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    groupMax = <span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; manager.size(); ++i) &#123;</div><div class="line"></div><div class="line">        DFS(manager[i], <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; groupMax &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://shoulderhu.github.io/onlinejudge/onlinejudge/uva/280/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -553,7 +825,7 @@
               
                 <a href="/onlinejudge/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -564,7 +836,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
