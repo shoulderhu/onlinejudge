@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, p, gro">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:type" content="article">
-<meta property="og:title" content="115A - Party">
-<meta property="og:url" content="http://shoulderhu.github.io/onlinejudge/codeforces//115a//index.html">
+<meta property="og:title" content="CodeForces 20C - Dijkstra">
+<meta property="og:url" content="http://shoulderhu.github.io/onlinejudge/codeforces//20c//index.html">
 <meta property="og:site_name" content="Online Judge">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, p, gro">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-15T10:40:59.101Z">
+<meta property="og:updated_time" content="2017-11-20T10:14:01.743Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="115A - Party">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051#include &amp;lt;iostream&amp;gt;#include &amp;lt;vector&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int n, p, gro">
+<meta name="twitter:title" content="CodeForces 20C - Dijkstra">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://shoulderhu.github.io/onlinejudge/codeforces//115a//"/>
+  <link rel="canonical" href="http://shoulderhu.github.io/onlinejudge/codeforces//20c//"/>
 
 
 
 
 
-  <title>115A - Party | Online Judge</title>
+  <title>CodeForces 20C - Dijkstra | Online Judge</title>
   
 
 
@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://shoulderhu.github.io/onlinejudge/onlinejudge/codeforces/115a/">
+    <link itemprop="mainEntityOfPage" href="http://shoulderhu.github.io/onlinejudge/onlinejudge/codeforces/20c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shoulder Hu">
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">115A - Party</h1>
+          <h1 class="post-title" itemprop="name headline">CodeForces 20C - Dijkstra</h1>
         
 
         <div class="post-meta">
@@ -304,9 +304,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/onlinejudge/codeforces/115a/#comments" itemprop="discussionUrl">
+                <a href="/onlinejudge/codeforces/20c/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="codeforces//115a//" itemprop="commentCount"></span>
+                        data-disqus-identifier="codeforces//20c//" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -334,7 +334,7 @@
       
 
       
-        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, p, groupMax;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; manager;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; superior[<span class="number">2001</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> group)</span> </span>&#123;</div><div class="line"></div><div class="line">    groupMax = max(group, groupMax);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; superior[m].size(); ++i) &#123;</div><div class="line"></div><div class="line">        DFS(superior[m][i], group + <span class="number">1</span>);		</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</div><div class="line"></div><div class="line">        <span class="built_in">cin</span> &gt;&gt; p;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (p == <span class="number">-1</span>) &#123;</div><div class="line"></div><div class="line">            manager.push_back(i);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line"></div><div class="line">            superior[p].push_back(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    groupMax = <span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; manager.size(); ++i) &#123;</div><div class="line"></div><div class="line">        DFS(manager[i], <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; groupMax &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">long</span> <span class="keyword">long</span>, <span class="keyword">int</span>&gt; Pair;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, a;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">to</span> &#123;</span> <span class="keyword">int</span> b, w; &#125; To;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">dis</span> &#123;</span></div><div class="line">    <span class="keyword">int</span> parent;</div><div class="line">    <span class="keyword">long</span> <span class="keyword">long</span> path;</div><div class="line">&#125; Dis[<span class="number">100001</span>];</div><div class="line"><span class="built_in">vector</span>&lt;to&gt; edge[<span class="number">100001</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Dijkstra</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    Pair p;</div><div class="line">    priority_queue&lt;Pair, <span class="built_in">vector</span>&lt;Pair&gt;, greater&lt;Pair&gt;&gt; Queue;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</div><div class="line"></div><div class="line">        Dis[i].parent = i;</div><div class="line">        Dis[i].path = LLONG_MAX;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Dis[<span class="number">1</span>].path = <span class="number">0</span>;</div><div class="line">    Queue.push(Pair(<span class="number">0</span>, <span class="number">1</span>));</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (!Queue.empty()) &#123;</div><div class="line"></div><div class="line">        p = Queue.top();</div><div class="line">        Queue.pop();</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (Dis[p.second].path &lt; p.first) &#123;</div><div class="line"></div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; edge[p.second].size(); ++i) &#123;</div><div class="line"></div><div class="line">            To = edge[p.second][i];</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (Dis[To.b].path &gt; p.first + To.w) &#123;</div><div class="line"></div><div class="line">                Dis[To.b].parent = p.second;</div><div class="line">                Dis[To.b].path = p.first + To.w;				</div><div class="line">                Queue.push(Pair(Dis[To.b].path, To.b));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">bool</span> isPath = <span class="literal">true</span>;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path;</div><div class="line"></div><div class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</div><div class="line"></div><div class="line">        <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; To.b &gt;&gt; To.w;</div><div class="line">        edge[a].push_back(To);</div><div class="line">        swap(a, To.b);</div><div class="line">        edge[a].push_back(To);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Dijkstra();</div><div class="line">    path.push_back(n);</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (n != <span class="number">1</span>) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (Dis[n].parent == n) &#123;</div><div class="line"></div><div class="line">            isPath = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        n = Dis[n].parent;</div><div class="line">        path.push_back(n);		</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(isPath) &#123;</div><div class="line"></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="number">1</span>;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = path.size() - <span class="number">2</span>; i &gt;= <span class="number">0</span>; --i) &#123;</div><div class="line"></div><div class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">' '</span> &lt;&lt; path[i];</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"-1\n"</span>; &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -359,8 +359,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/onlinejudge/codeforces/20c/" rel="next" title="CodeForces 20C - Dijkstra">
-                <i class="fa fa-chevron-left"></i> CodeForces 20C - Dijkstra
+              <a href="/onlinejudge/codeforces/489d/" rel="next" title="489D - Unbearable Controversy of Being">
+                <i class="fa fa-chevron-left"></i> 489D - Unbearable Controversy of Being
               </a>
             
           </div>
@@ -368,6 +368,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/onlinejudge/codeforces/115a/" rel="prev" title="115A - Party">
+                115A - Party <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -655,9 +659,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://shoulderhu.github.io/onlinejudge/codeforces/115a/';
-          this.page.identifier = 'codeforces//115a//';
-          this.page.title = '115A - Party';
+          this.page.url = 'http://shoulderhu.github.io/onlinejudge/codeforces/20c/';
+          this.page.identifier = 'codeforces//20c//';
+          this.page.title = 'CodeForces 20C - Dijkstra';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://onlinejudge.disqus.com/embed.js';
